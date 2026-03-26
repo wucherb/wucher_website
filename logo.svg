@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <clipPath id="scope">
+      <circle cx="200" cy="200" r="172"/>
+    </clipPath>
+  </defs>
+
+  <!-- Outer aperture ring -->
+  <circle cx="200" cy="200" r="174" fill="none" stroke="#1D1D1B" stroke-width="2"/>
+
+  <!-- Cardinal alignment ticks (precision instrument / microscope stage) -->
+  <line x1="200" y1="26"  x2="200" y2="38"  stroke="#1D1D1B" stroke-width="1.5"/>
+  <line x1="200" y1="374" x2="200" y2="362" stroke="#1D1D1B" stroke-width="1.5"/>
+  <line x1="26"  y1="200" x2="38"  y2="200" stroke="#1D1D1B" stroke-width="1.5"/>
+  <line x1="374" y1="200" x2="362" y2="200" stroke="#1D1D1B" stroke-width="1.5"/>
+
+  <g clip-path="url(#scope)">
+
+    <!-- Species A — solid cells flowing inside microfluidic channel -->
+    <!-- Channel spans y=187 to y=213; r=13 cells touch the walls exactly -->
+    <circle cx="78"  cy="200" r="9"  fill="#1D1D1B"/>
+    <circle cx="110" cy="200" r="13" fill="#1D1D1B"/>
+    <circle cx="145" cy="200" r="8"  fill="#1D1D1B"/>
+    <circle cx="176" cy="200" r="11" fill="#1D1D1B"/>
+    <circle cx="208" cy="200" r="9"  fill="#1D1D1B"/>
+    <circle cx="242" cy="200" r="13" fill="#1D1D1B"/>
+    <circle cx="278" cy="200" r="10" fill="#1D1D1B"/>
+    <circle cx="313" cy="200" r="7"  fill="#1D1D1B"/>
+
+    <!-- Microfluidic channel walls (drawn above cells — glass wall effect) -->
+    <line x1="0" y1="187" x2="400" y2="187" stroke="#1D1D1B" stroke-width="1.5"/>
+    <line x1="0" y1="213" x2="400" y2="213" stroke="#1D1D1B" stroke-width="1.5"/>
+
+    <!-- Species B — outline cells above channel (planktonic / clinical samples) -->
+    <circle cx="130" cy="158" r="8"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="175" cy="143" r="6"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="238" cy="155" r="10" fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="295" cy="148" r="7"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="318" cy="166" r="5"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+
+    <!-- Species B — outline cells below channel (biofilm settlement / clinical outcome) -->
+    <circle cx="108" cy="247" r="7"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="158" cy="260" r="9"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="215" cy="252" r="6"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="270" cy="262" r="8"  fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+    <circle cx="322" cy="248" r="10" fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+
+  </g>
+</svg>
