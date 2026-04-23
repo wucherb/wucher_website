@@ -734,6 +734,74 @@
     /* ── ACTIVE NAV LINK ── */
     .nav-links a.active { color: var(--accent); }
 
+    /* ── HERO PREPRINT STRIP ── */
+    .hero-preprint-spec {
+      grid-column: 1 / -1;
+      background: rgba(244, 106, 13, 0.08);
+      border: 1px solid rgba(244, 106, 13, 0.45);
+      border-left: 3px solid var(--accent);
+      padding: 16px 48px 16px 20px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.22s, border-color 0.22s, box-shadow 0.22s, transform 0.22s;
+    }
+    .hero-preprint-spec:hover {
+      background: rgba(244, 106, 13, 0.18);
+      border-color: rgba(244, 106, 13, 0.75);
+      border-left-color: var(--accent);
+      box-shadow: 0 4px 28px rgba(244, 106, 13, 0.30);
+      transform: translateY(-1px);
+    }
+    .hero-preprint-spec::after {
+      content: '↗';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: rgba(244, 106, 13, 0.55);
+      transition: color 0.22s, transform 0.22s;
+    }
+    .hero-preprint-spec:hover::after {
+      color: var(--accent);
+      transform: translateY(calc(-50% - 2px)) translateX(2px);
+    }
+    .hero-preprint-spec .spec-label {
+      color: rgba(255,255,255,0.50);
+      transition: color 0.22s;
+    }
+    .hero-preprint-spec:hover .spec-label {
+      color: rgba(255,255,255,0.80);
+    }
+    .hero-preprint-title {
+      color: var(--accent);
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.45;
+      transition: color 0.22s;
+    }
+    .hero-preprint-spec:hover .hero-preprint-title {
+      color: #ff8c3a;
+    }
+
+    /* ── PUB BADGE ── */
+    .pub-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 0.44rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 1px 5px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
     /* ── FOOTER ── */
     footer { border-top: 2px solid var(--rule-strong); padding: 20px var(--pad); }
     .footer-inner {
@@ -796,6 +864,12 @@
           <span class="spec-label">Research Focus</span>
           <span class="spec-value">Microbial Ecology · Imaging</span>
         </div>
+        <a class="spec hero-preprint-spec"
+           href="https://doi.org/10.64898/2026.04.20.716137"
+           target="_blank" rel="noopener">
+          <span class="spec-label">New Preprint &middot; bioRxiv &middot; April 2026</span>
+          <span class="hero-preprint-title">Metabiosis underlies a microbiota permissive to Pseudamonadota and increases the risk of gut-borne bloodstream infection</span>
+        </a>
       </div>
     </div>
     <div class="hero-photo-wrap fade-in d2">
@@ -815,7 +889,7 @@
         <li><a class="kw-item-link" href="#publications">Gut Microbial Ecology <span class="kw-arrow">→</span></a></li>
         <li><a class="kw-item-link" href="https://www.nature.com/articles/s41579-023-00877-3" target="_blank" rel="noopener">Antimicrobial Resistance <span class="kw-arrow">→</span></a></li>
         <li><a class="kw-item-link" href="https://pubmed.ncbi.nlm.nih.gov/33826904/" target="_blank" rel="noopener">Single-Cell Microscopy <span class="kw-arrow">→</span></a></li>
-        <li>Infectious Disease</li>
+        <li><a class="kw-item-link" href="https://doi.org/10.64898/2026.04.20.716137" target="_blank" rel="noopener">Infectious Disease <span class="kw-arrow">→</span></a></li>
       </ul>
     </aside>
 
@@ -916,9 +990,9 @@
         </div>
 
         <div class="gallery-item">
-          <img src="pub-image-2.jpg" loading="lazy" alt="Unprotected E. coli (yellow) under attack from bacteriophage (cyan) outside V. cholerae biofilm clusters">
+          <img src="pub-image-2.jpg" loading="lazy" alt="Unprotected E. coli (yellow) under attack from B. bacteriovorus (cyan) outside V. cholerae biofilm clusters">
           <div class="gallery-caption">
-            <span class="gallery-caption-title">Unprotected <em>E. coli</em> (yellow) attacked by bacteriophage (cyan) at the periphery of <em>V. cholerae</em> colonies (red)</span>
+            <span class="gallery-caption-title">Unprotected <em>E. coli</em> (yellow) attacked by <em>B. bacteriovorus</em> (cyan) at the periphery of <em>V. cholerae</em> colonies (red)</span>
             <span class="gallery-caption-source">PNAS &middot; 2023</span>
           </div>
         </div>
@@ -935,6 +1009,20 @@
     <p class="tag">02 · Publications</p>
     <h2 class="h-section">Publications</h2>
     <ul class="pub-list">
+
+      <!-- 2026 -->
+      <li class="pub-item">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <div class="pub-title">
+            <a href="https://doi.org/10.64898/2026.04.20.716137" target="_blank" rel="noopener">
+              Metabiosis underlies a microbiota permissive to Pseudamonadota and increases the risk of gut-borne bloodstream infection
+            </a>
+          </div>
+          <div class="pub-journal">bioRxiv<span class="pub-badge">Preprint</span></div>
+          <div class="pub-authors"><b>Wucher BR</b>, Sharma S, Kaune D, de la Hoz C, Bendale P, Xavier JB</div>
+        </div>
+      </li>
 
       <!-- 2023 -->
       <li class="pub-item">
@@ -1059,18 +1147,6 @@
           </div>
           <div class="pub-journal">mSphere &middot; Vol 1 No 5</div>
           <div class="pub-authors">Blanchard C, Brooks L, Ebsworth-Mojica K, Didione L, <b>Wucher B</b>, Dewhurst S, Krysan D, Dunman PM, Wozniak RAF</div>
-        </div>
-      </li>
-
-      <!-- In Preparation -->
-      <li class="pub-item prep">
-        <div class="pub-year">In prep<span>manuscript</span></div>
-        <div class="pub-body">
-          <div class="pub-title">
-            Gut commensal metabolisms shape pathogen colonization and alter antibiotic sensitivity
-          </div>
-          <div class="pub-journal">In preparation</div>
-          <div class="pub-authors"><b>Wucher BR</b>, Sharma S, Kaune D, de la Hoz C, Bendale P, Xavier JB</div>
         </div>
       </li>
 
